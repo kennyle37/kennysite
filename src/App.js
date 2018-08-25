@@ -7,7 +7,7 @@ import {
 import logo from './logo.svg';
 import './App.css';
 
-import Home from './Home/Home';
+import HomePageLayout from './Home/Home';
 import About from './AboutMe/AboutMe';
 import Portfolio from './Portfolio/Portfolio';
 import Practice from './Practice/Practice';
@@ -29,7 +29,7 @@ class App extends Component {
         </ul>
         
       <hr/> 
-        <Route path="/" component={Home}/>  
+        <Route path="/" component={HomePageLayout}/>  
         <Route path="/about" component={About}/> 
         <Route path="/portfolio" component={Portfolio}/>  
         <Route path="/practice" component={Practice}/> 
