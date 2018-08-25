@@ -18,20 +18,16 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        {/* <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Welcome to React</h1>
-        </header> */}
       <Router>
       <div>
-      <ul>
-        <li><Link to ="/">Home</Link></li>
-        <li><Link to ="/about">About Me</Link></li>
-        <li><Link to ="/portfolio">Portfolio</Link></li>
-        <li><Link to ="/practice">Practice Blog</Link></li>
-        <li><Link to ="/contact">Contact</Link></li>
-      </ul>
-      
+        <ul>
+          <li><Link to ="/">Home</Link></li>
+          <li><Link to ="/about">About Me</Link></li>
+          <li><Link to ="/portfolio">Portfolio</Link></li>
+          <li><Link to ="/practice">Practice Blog</Link></li>
+          <li><Link to ="/contact">Contact</Link></li>
+        </ul>
+        
       <hr/> 
         <Route path="/" component={Home}/>  
         <Route path="/about" component={About}/> 
