@@ -38,7 +38,7 @@ const Portfolio = () => (
           <Image 
             centered 
             bordered 
-            src='https://s3.amazonaws.com/poly-screenshots.angel.co/Project/71/788234/d796385db90f6711ad4390017215136c-original.PNG' 
+            src='https://s3.amazonaws.com/poly-screenshots.angel.co/Project/8a/787523/53bcefb73bda63b82a2dde9cd7e743af-original.jpeg' 
             height='250' 
             width='250' 
           />
