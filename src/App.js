@@ -1,12 +1,11 @@
 import React from 'react'
-import Banner from './Banner/Banner'
+import HeaderBar from './Banner/Banner'
+
 
 class App extends React.Component {
   render() {
     return (
-      <Banner>
-        
-      </Banner>
+      <HeaderBar></HeaderBar>
     );
   }
 }
