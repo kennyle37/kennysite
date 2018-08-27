@@ -46,7 +46,6 @@ class NavBar extends Component {
                 <Menu.Item as='a' active>
                   Home
                 </Menu.Item>
-                <Menu.Item as='a'>Home</Menu.Item>
                 <Menu.Item as='a'>About Me</Menu.Item>
                 <Menu.Item as='a'>Porfolio</Menu.Item>
                 <Menu.Item as='a'>Practice Problems</Menu.Item>
