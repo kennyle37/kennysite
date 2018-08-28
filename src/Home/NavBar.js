@@ -1,5 +1,4 @@
 import React, { Component } from 'react'
-
 import {
   Button,
   Container,
@@ -8,13 +7,21 @@ import {
   Segment,
   Visibility,
 } from 'semantic-ui-react'
-import PropTypes from 'prop-types'
 
+import {
+  BrowserRouter as Router,
+  Route,
+  Link
+} from 'react-router-dom'
+
+import PropTypes from 'prop-types'
 import Banner from './Banner'
+
 
 class NavBar extends Component {
   state = {};
 
+  handleItemClick = (e, { name }) => this.setState({ activeItem: name });
   hideFixedMenu = () => this.setState({ fixed: false });
   showFixedMenu = () => this.setState({ fixed: true });
 
@@ -65,6 +72,12 @@ class NavBar extends Component {
       </Responsive>
     )
   }
+}
+
+const Routes = () => {
+  <Router>
+    <Route exact path='/' Component={Banner}></Route>
+  </Router>
 }
 
 NavBar.propTypes = {
