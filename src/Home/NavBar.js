@@ -90,7 +90,7 @@ class NavBar extends Component {
                 </Menu.Item>
                 <Menu.Item position='right'>
                   <Button as='a' inverted={!fixed}>
-                    Contact
+                    Contact Me
                   </Button>
                 </Menu.Item>
               </Container>
