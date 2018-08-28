@@ -2,7 +2,7 @@ import React from 'react'
 import NavBar from './Home/NavBar'
 import About from './AboutMe/AboutMe'
 import Portfolio from './Portfolio/Portfolio'
-import Skill from './Skill/Skil';
+import Skill from './Skill/Skill';
 
 class App extends React.Component {
   render() {
@@ -10,8 +10,8 @@ class App extends React.Component {
       <div>
         <NavBar />
         <About />
-        <Portfolio />
         <Skill />
+        <Portfolio />
       </div>
     )
   }

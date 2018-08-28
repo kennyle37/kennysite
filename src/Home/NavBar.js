@@ -48,6 +48,7 @@ class NavBar extends Component {
                 </Menu.Item>
                 <Menu.Item as='a'>About Me</Menu.Item>
                 <Menu.Item as='a'>Porfolio</Menu.Item>
+                <Menu.Item as='a'>Skill</Menu.Item>
                 <Menu.Item as='a'>Practice Problems</Menu.Item>
                 <Menu.Item position='right'>
                   <Button as='a' inverted={!fixed}>
