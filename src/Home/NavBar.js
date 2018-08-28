@@ -19,7 +19,10 @@ import Banner from './Banner'
 
 
 class NavBar extends Component {
-  state = {};
+  constructor(props) {
+    super(props);
+    this.state = { activeItem: 'home'}
+  }
 
   handleItemClick = (e, { name }) => this.setState({ activeItem: name });
   hideFixedMenu = () => this.setState({ fixed: false });
@@ -27,7 +30,7 @@ class NavBar extends Component {
 
   render() {
     const { children } = this.props;
-    const { fixed } = this.state;
+    const { fixed, activeItem } = this.state;
 
     return (
       <Responsive minWidth={Responsive.onlyTablet.minWidth}>
@@ -50,13 +53,41 @@ class NavBar extends Component {
               size='large'
             >
               <Container>
-                <Menu.Item as='a' active>
+                <Menu.Item 
+                  name='home' 
+                  active={activeItem === 'home'}
+                  onClick={this.handleItemClick}
+                >
                   Home
                 </Menu.Item>
-                <Menu.Item as='a'>About Me</Menu.Item>
-                <Menu.Item as='a'>Porfolio</Menu.Item>
-                <Menu.Item as='a'>Skill</Menu.Item>
-                <Menu.Item as='a'>Practice Problems</Menu.Item>
+                <Menu.Item                   
+                  name='aboutMe' 
+                  active={activeItem === 'aboutMe'}
+                  onClick={this.handleItemClick}
+                >
+                  About Me
+                </Menu.Item>
+                <Menu.Item
+                  name='portfolio' 
+                  active={activeItem === 'portfolio'}
+                  onClick={this.handleItemClick}
+                >
+                  Porfolio
+                </Menu.Item>
+                <Menu.Item
+                  name='skill' 
+                  active={activeItem === 'skill'}
+                  onClick={this.handleItemClick}
+                >
+                  Skill
+                </Menu.Item>
+                <Menu.Item
+                  name='practiceProbs' 
+                  active={activeItem === 'practiceProbs'}
+                  onClick={this.handleItemClick}
+                >
+                  Practice Problems
+                </Menu.Item>
                 <Menu.Item position='right'>
                   <Button as='a' inverted={!fixed}>
                     Contact
