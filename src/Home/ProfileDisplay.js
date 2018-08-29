@@ -1,6 +1,5 @@
 import React from 'react';
 import Zoom from 'react-reveal/Zoom'
-import { Element } from 'react-scroll'
 
 class ProfileDisplay extends React.Component {
   render() {

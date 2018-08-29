@@ -7,7 +7,7 @@ import {
   Segment,
   Visibility,
 } from 'semantic-ui-react'
-import { Link, Events, animateScroll as Scroll, scrollSpy, scroller } from 'react-scroll'
+import { Link, Events, animateScroll as scroll, scrollSpy, scroller } from 'react-scroll'
 
 import PropTypes from 'prop-types'
 import Banner from './Banner'
@@ -16,7 +16,8 @@ import Banner from './Banner'
 class NavBar extends Component {
   constructor(props) {
     super(props);
-    this.state = { activeItem: 'home'}
+    this.state = { activeItem: 'home'};
+    this.scrollToTop = this.scrollToTop.bind(this);
   }
 
   componentDidMount() {
@@ -34,6 +35,10 @@ class NavBar extends Component {
   componentWillunmount() {
     Events.scrollEvent.remove('begin');
     Events.scrollEvent.remove('end');
+  }
+
+  scrollToTop() {
+    scroll.scrollToTop();
   }
 
   handleItemClick = (e, { name }) => this.setState({ activeItem: name });
@@ -66,13 +71,8 @@ class NavBar extends Component {
             >
               <Container>
                 {/* Home Section */}
-                <Link
-                  activeClass='active' 
-                  to='home' 
-                  spy={true} 
-                  smooth={true} 
-                  duration={500} 
-                  onSetActive={this.handleSetActive}
+                <a
+                  onClick={this.scrollToTop}
                 >
                   <Menu.Item 
                     name='home' 
@@ -81,7 +81,7 @@ class NavBar extends Component {
                   >
                     Home
                   </Menu.Item>
-                </Link>
+                </a>
 
                 {/* About Me Section */}
                 <Link 
