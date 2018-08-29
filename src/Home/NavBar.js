@@ -71,20 +71,17 @@ class NavBar extends Component {
             >
               <Container>
                 {/* Home Section */}
-                <a
-                  onClick={this.scrollToTop}
-                >
                   <Menu.Item 
                     name='home' 
                     active={activeItem === 'home'}
                     onClick={this.handleItemClick}
+                    onClick={this.scrollToTop}
                   >
                     Home
                   </Menu.Item>
-                </a>
-
+ 
                 {/* About Me Section */}
-                <Link 
+                <Link
                   activeClass='active' 
                   to='aboutMe' 
                   spy={true} 
