@@ -59,7 +59,7 @@ class NavBar extends Component {
           <Segment
             inverted
             textAlign='center'
-            style={{ minHeight: 800, padding: '1em 0em' }}
+            style={{ minHeight: 800, padding: '.2em 0em' }}
             vertical
           >
             <Menu
@@ -89,7 +89,8 @@ class NavBar extends Component {
                   to='aboutMe' 
                   spy={true} 
                   smooth={true} 
-                  duration={500} 
+                  duration={1000} 
+                  offset={70}
                   onSetActive={this.handleSetActive}
                 >
                   <Menu.Item                   
@@ -107,7 +108,8 @@ class NavBar extends Component {
                   to='skill' 
                   spy={true} 
                   smooth={true} 
-                  duration={500} 
+                  duration={1000}
+                  offset={-350} 
                   onSetActive={this.handleSetActive}
                 >
                   <Menu.Item
@@ -125,7 +127,8 @@ class NavBar extends Component {
                   to='portfolio' 
                   spy={true} 
                   smooth={true} 
-                  duration={500} 
+                  duration={1000} 
+                  offset={-200}
                   onSetActive={this.handleSetActive}
                 >
                   <Menu.Item
@@ -141,9 +144,10 @@ class NavBar extends Component {
                 <Link
                   activeClass='practiceProbs' 
                   to='practiceProbs' 
-                  spy={true} 
-                  smooth={true} 
-                  duration={500} 
+                  spy={true}
+                  smooth={true}
+                  duration={1000}
+                  offset={-250}
                   onSetActive={this.handleSetActive}
                 >
                   <Menu.Item
