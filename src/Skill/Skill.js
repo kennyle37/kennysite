@@ -1,8 +1,10 @@
 import React from 'react'
 import { Grid, Header, Label, Segment } from 'semantic-ui-react'
+import { Element } from 'react-scroll'
 
 const Skill = () => (
   <Segment className='skill-section' style={{ padding:'15em 15em' }}>
+    <Element name='skill' className='element'></Element>
     <Header 
       textAlign='center' 
       as='h3' 
@@ -50,6 +52,7 @@ const Skill = () => (
       </Grid.Column>
     </Grid>
   </Segment>
+
 )
 
 export default Skill;
