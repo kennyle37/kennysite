@@ -3,8 +3,8 @@ import { Header, Grid, Image } from 'semantic-ui-react'
 import { Element } from 'react-scroll'
 
 const Portfolio = () => (
+  <Element name='portfolio' className='element' >
     <Grid columns='three' divided textAlign='center' style={{ padding:'15em 15em' }}>
-      <Element name='portfolio' className='element' />
       <Header as='h3' style={{ fontSize: '2em', padding: '1em 1em'}}>
         Portfolio
       </Header>
@@ -51,6 +51,7 @@ const Portfolio = () => (
       </Grid.Row>
 
     </Grid>
+    </Element>
 )
 
 export default Portfolio;

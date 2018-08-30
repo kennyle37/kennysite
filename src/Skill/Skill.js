@@ -3,8 +3,7 @@ import { Grid, Header, Label, Segment } from 'semantic-ui-react'
 import { Element } from 'react-scroll'
 
 const Skill = () => (
-  <Segment className='skill-section' style={{ padding:'23em 0em' }}>
-    <Element name='skill' className='element'></Element>
+  <Element name='skill' className='element' style={{ padding:'23em 0em' }}>
     <Header 
       textAlign='center' 
       as='h3' 
@@ -51,7 +50,7 @@ const Skill = () => (
         </Segment>
       </Grid.Column>
     </Grid>
-  </Segment>
+  </Element>
 
 )
 
