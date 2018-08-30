@@ -2,7 +2,7 @@ import React from 'react';
 import { Header, Grid, Image } from 'semantic-ui-react'
 
 const Portfolio = () => (
-  <Grid columns='three' divided textAlign='center' style={{ padding:'15em 15em' }}>
+  <Grid columns='three' divided textAlign='center' style={{ padding:'24em 15em' }}>
     <Header as='h3' style={{ fontSize: '2em', padding: '1em 1em'}}>
       Portfolio
     </Header>

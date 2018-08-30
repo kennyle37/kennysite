@@ -5,10 +5,13 @@ import ProfileDisplay from './ProfileDisplay'
 /*
 This function adds our background banner and add the parralax scrolling effect to it.
 */
+const img = 'https://www.wallpaperflare.com/static/918/649/206/nature-mountains-landscape-forest-wallpaper.jpg';
+
 const Banner = () => (
   <Parallax 
-    bgImage={'https://images.unsplash.com/photo-1498092651296-641e88c3b057?auto=format&fit=crop&w=1778&q=60&ixid=dW5zcGxhc2guY29tOzs7Ozs%3D'}
-    strength={500}>
+    bgImage={img}
+    bgHeight={'500'}
+    strength={800}>
     <div style={{height: 800}}>
       <ProfileDisplay />
     </div>

@@ -7,7 +7,7 @@ import {
   Segment,
   Visibility,
 } from 'semantic-ui-react'
-import { Link, Events, animateScroll as scroll } from 'react-scroll'
+import { Link, Events, animateScroll as scroll, scrollSpy } from 'react-scroll'
 
 import PropTypes from 'prop-types'
 import Banner from './Banner'
@@ -15,9 +15,10 @@ import Banner from './Banner'
 class NavBar extends Component {
   constructor(props) {
     super(props);
-    this.state = { activeItem: 'home'};
     this.scrollToTop = this.scrollToTop.bind(this);
   }
+
+  state = {};
 
   componentDidMount() {
     Events.scrollEvent.register('begin', function() {
@@ -28,6 +29,7 @@ class NavBar extends Component {
       console.log('end', arguments);
     });
 
+    scrollSpy.update();
   }
 
   componentWillunmount() {
@@ -72,12 +74,10 @@ class NavBar extends Component {
                 <Menu.Item 
                   name='home' 
                   active={activeItem === 'home'}
+                  spy={true}
                   onClick={this.handleItemClick}
                   as={Link}
                   to='home'
-                  activeClass='active'
-                  onSetActive={this.handleSetActive}
-                  spy={true} 
                   smooth={true} 
                   duration={1000} 
                   offset={0}
@@ -89,15 +89,15 @@ class NavBar extends Component {
                 <Menu.Item
                   name='aboutMe' 
                   active={activeItem === 'aboutMe'}
+                  spy={true} 
                   onClick={this.handleItemClick}
                   as={Link}
-                  to='aboutMe' 
+                  to='aboutMe'
                   activeClass='active'
                   onSetActive={this.handleSetActive}
-                  spy={true} 
                   smooth={true} 
                   duration={1000} 
-                  offset={55}
+                  offset={50}
                 >
                   About Me
                 </Menu.Item>
@@ -105,16 +105,14 @@ class NavBar extends Component {
                 {/* Skill Section */}
                 <Menu.Item
                   name='skill' 
-                  onClick={this.handleItemClick}
                   active={activeItem === 'skill'}
-                  as={Link}
-                  activeClass='active'
-                  onSetActive={this.handleSetActive}
-                  to='skill' 
                   spy={true} 
+                  onClick={this.handleItemClick}
+                  as={Link}
+                  to='skill' 
                   smooth={true} 
                   duration={1000}
-                  offset={0} 
+                  offset={70} 
                 >
                   Skill
                 </Menu.Item>
@@ -123,15 +121,14 @@ class NavBar extends Component {
                 <Menu.Item
                   name='portfolio' 
                   active={activeItem === 'portfolio'}
-                  onClick={this.handleItemClick}
                   activeClass='active'
-                  onSetActive={this.handleSetActive}
+                  spy={true} 
+                  onClick={this.handleItemClick}
                   as={Link}
                   to='portfolio' 
-                  spy={true} 
                   smooth={true} 
                   duration={1000} 
-                  offset={-100}
+                  offset={90}
                 >
                   Porfolio
                 </Menu.Item>
@@ -143,8 +140,6 @@ class NavBar extends Component {
                   onClick={this.handleItemClick}
                   as={Link}
                   to='practiceProbs' 
-                  activeClass='active'
-                  onSetActive={this.handleSetActive}
                   spy={true}
                   smooth={true}
                   duration={1000}

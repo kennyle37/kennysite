@@ -2,7 +2,6 @@ import React from 'react';
 import { Grid, Header, Image } from 'semantic-ui-react'
 
 const About = () => (
- 
     <Grid container verticalAlign='middle' style={{ padding: '27em 5em' }}>
       <Grid.Row>
         <Grid.Column width={8}>

@@ -1,8 +1,8 @@
-import React, { Fragment } from 'react'
+import React from 'react'
 import { Grid, Header, Label, Segment } from 'semantic-ui-react'
 
 const Skill = () => (
-  <Fragment style={{ padding: '50em 10em'}}>
+  <Segment style={{ padding: '27em 15em'}}>
     <Header 
       textAlign='center' 
       as='h3' 
@@ -49,7 +49,7 @@ const Skill = () => (
         </Segment>
       </Grid.Column>
     </Grid>
-  </Fragment>
+  </Segment>
 )
 
 export default Skill;
