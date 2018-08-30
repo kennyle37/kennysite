@@ -1,25 +1,33 @@
 import React from 'react';
-import { Grid, Header, Image, Segment} from 'semantic-ui-react'
+import { Container, Grid, Header, List, Segment} from 'semantic-ui-react'
 
 const Contact = () => (
-  <Segment style={{ padding: '20em 20em' }} vertical>
-    <Grid container stackable>
+  <Segment inverted vertical style={{ padding: '2em 0em' }}>
+  <Container>
+    <Grid divided inverted stackable>
       <Grid.Row>
-        <Grid.Column width={4}></Grid.Column>
-        <Grid.Column width={8}>
-          <Header as='h3' style={{ fontSize: '2em' }} textAlign='center'>
-            Contact Me:
+        <Grid.Column width={3}></Grid.Column>
+        <Grid.Column width={3}>
+          <Header inverted as='h4' content='Info' />
+          <List link inverted>
+            <List.Item as='a' href='mailto:kennyle37@gmail.com' target='_blank'>Contact Me</List.Item>
+            <List.Item as='a' href='https://www.linkedin.com/in/kle37/' target='_blank'>LinkedIn</List.Item>
+            <List.Item as='a' href='https://github.com/kennyle37' target='_blank'>Github</List.Item>
+          </List>
+        </Grid.Column>
+        <Grid.Column width={7}>
+          <Header as='h4' inverted>
+            Questions?
           </Header>
-          <p style={{ fontSize: '1.33em' }}>
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+          <p>
+            Please contact me for my most up to date resume!
           </p>
         </Grid.Column>
-        <Grid.Column width={4}></Grid.Column>
-      </Grid.Row>
-      <Grid.Row>
+        <Grid.Column width={3}></Grid.Column>
       </Grid.Row>
     </Grid>
-  </Segment>
+  </Container>
+</Segment>
 )
 
 export default Contact;

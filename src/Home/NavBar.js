@@ -80,15 +80,17 @@ class NavBar extends Component {
             >
               <Container>
                 {/* Home Section */}
-                  <Menu.Item 
-                    name='home' 
-                    active={activeItem === 'home'}
-                    onClick={this.scrollToTop}
-                  >
-                    <Link>
-                      Home
-                    </Link>
-                  </Menu.Item>
+
+                <Menu.Item 
+                  name='home' 
+                  active={activeItem === 'home'}
+                  onClick={this.handleItemClick}
+                >
+                  <Link onClick={this.scrollToTop}>
+                    Home
+                  </Link>
+                </Menu.Item>
+         
 
                 {/* About Me Section */}
                 <Menu.Item                   
@@ -140,7 +142,7 @@ class NavBar extends Component {
                     spy={true} 
                     smooth={true} 
                     duration={1000} 
-                    offset={-200}
+                    offset={0}
                     onSetActive={this.handleSetActive}
                   >
                     Porfolio
@@ -169,7 +171,7 @@ class NavBar extends Component {
                 
                 {/* Contact Section */}
                 <Menu.Item position='right'>
-                  <Button as='a' inverted={!fixed}>
+                  <Button as='a' inverted={!fixed} href='mailto:kennyle37@gmail.com' target='_blank'>
                     Contact Me
                   </Button>
                 </Menu.Item>
