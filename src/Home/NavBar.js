@@ -12,7 +12,6 @@ import { Link, Events, animateScroll as scroll, scrollSpy, scroller } from 'reac
 import PropTypes from 'prop-types'
 import Banner from './Banner'
 
-
 class NavBar extends Component {
   constructor(props) {
     super(props);
@@ -39,6 +38,16 @@ class NavBar extends Component {
 
   scrollToTop() {
     scroll.scrollToTop();
+  }
+
+  scrollToElement() {
+    scroller.scrollTo('aboutMe', {
+      activeClass: 'active',
+      duration: 1000,
+      smooth: true,
+      spy: true,
+      offset: 70
+    })
   }
 
   handleItemClick = (e, { name }) => this.setState({ activeItem: name });
@@ -74,71 +83,78 @@ class NavBar extends Component {
                   <Menu.Item 
                     name='home' 
                     active={activeItem === 'home'}
-                    onClick={this.handleItemClick}
                     onClick={this.scrollToTop}
                   >
-                    Home
+                    <Link>
+                      Home
+                    </Link>
                   </Menu.Item>
- 
+
                 {/* About Me Section */}
-                <Link
-                  activeClass='active' 
-                  to='aboutMe' 
-                  spy={true} 
-                  smooth={true} 
-                  duration={1000} 
-                  offset={70}
-                  onSetActive={this.handleSetActive}
-                >
-                  <Menu.Item                   
+                <Menu.Item                   
                     name='aboutMe' 
                     active={activeItem === 'aboutMe'}
                     onClick={this.handleItemClick}
                   >
+                  <Link
+                    activeClass='active' 
+                    to='aboutMe' 
+                    spy={true} 
+                    smooth={true} 
+                    duration={1000} 
+                    offset={70}
+                    onSetActive={this.handleSetActive}
+                  >
                     About Me
-                  </Menu.Item>
-                </Link>
+                  </Link>
+                </Menu.Item>
 
                 {/* Skill Section */}
-                <Link
-                  activeClass='active' 
-                  to='skill' 
-                  spy={true} 
-                  smooth={true} 
-                  duration={1000}
-                  offset={-350} 
-                  onSetActive={this.handleSetActive}
-                >
-                  <Menu.Item
+                <Menu.Item
                     name='skill' 
                     active={activeItem === 'skill'}
                     onClick={this.handleItemClick}
                   >
+                  <Link
+                    activeClass='active' 
+                    to='skill' 
+                    spy={true} 
+                    smooth={true} 
+                    duration={1000}
+                    offset={-350} 
+                    onSetActive={this.handleSetActive}
+                  >
                     Skill
-                  </Menu.Item>
-                </Link>
+                  </Link>
+                </Menu.Item>
 
                 {/* Portfolio Section */}
-                <Link
-                  activeClass='active' 
-                  to='portfolio' 
-                  spy={true} 
-                  smooth={true} 
-                  duration={1000} 
-                  offset={-200}
-                  onSetActive={this.handleSetActive}
+                <Menu.Item
+                  name='portfolio' 
+                  active={activeItem === 'portfolio'}
+                  onClick={this.handleItemClick}
                 >
-                  <Menu.Item
-                    name='portfolio' 
-                    active={activeItem === 'portfolio'}
-                    onClick={this.handleItemClick}
+                  <Link
+                    activeClass='active' 
+                    to='portfolio' 
+                    spy={true} 
+                    smooth={true} 
+                    duration={1000} 
+                    offset={-200}
+                    onSetActive={this.handleSetActive}
                   >
                     Porfolio
-                  </Menu.Item>
-                </Link>
+                  </Link>
+                </Menu.Item>
+               
 
                 {/* Practice Section */}
-                <Link
+                <Menu.Item
+                  name='practiceProbs' 
+                  active={activeItem === 'practiceProbs'}
+                  onClick={this.handleItemClick}
+                >
+                  <Link
                   activeClass='practiceProbs' 
                   to='practiceProbs' 
                   spy={true}
@@ -147,14 +163,9 @@ class NavBar extends Component {
                   offset={-250}
                   onSetActive={this.handleSetActive}
                 >
-                  <Menu.Item
-                    name='practiceProbs' 
-                    active={activeItem === 'practiceProbs'}
-                    onClick={this.handleItemClick}
-                  >
                     Practice Problems
-                  </Menu.Item>
-                </Link>
+                  </Link>
+                </Menu.Item>
                 
                 {/* Contact Section */}
                 <Menu.Item position='right'>
@@ -162,6 +173,7 @@ class NavBar extends Component {
                     Contact Me
                   </Button>
                 </Menu.Item>
+
               </Container>
             </Menu>
             <Banner />
