@@ -7,15 +7,20 @@ This function adds our background banner and add the parralax scrolling effect t
 */
 const img = 'https://www.wallpaperflare.com/static/918/649/206/nature-mountains-landscape-forest-wallpaper.jpg';
 
-const Banner = () => (
-  <Parallax 
-    bgImage={img}
-    bgHeight={'500'}
-    strength={800}>
-    <div style={{height: 800}}>
-      <ProfileDisplay />
-    </div>
-  </Parallax>
-)
+class Banner extends React.Component {
+  render() {
+    return (
+      <Parallax 
+        bgImage={img}
+        bgHeight={'300'}
+        strength={300}>
+        <div style={{height: 800}}
+      >
+        <ProfileDisplay />
+      </div>
+    </Parallax>
+    )
+  }
+}
 
 export default Banner;

@@ -1,6 +1,8 @@
 import React from 'react'
 import { Grid, Header, Label, Segment } from 'semantic-ui-react'
 
+const img = 'https://wallpapercave.com/wp/no4OgdQ.jpg';
+
 const Skill = () => (
   <Segment style={{ padding: '27em 15em'}}>
     <Header 
