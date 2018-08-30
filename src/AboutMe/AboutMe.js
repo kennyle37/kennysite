@@ -1,9 +1,8 @@
 import React from 'react';
 import { Grid, Header, Image } from 'semantic-ui-react'
-import { Element } from 'react-scroll'
 
 const About = () => (
-  <Element name='aboutMe' className='element'>
+ 
     <Grid container verticalAlign='middle' style={{ padding: '27em 5em' }}>
       <Grid.Row>
         <Grid.Column width={8}>
@@ -21,7 +20,7 @@ const About = () => (
       <Grid.Row>
       </Grid.Row>
     </Grid>
-  </Element>
+
 )
 
 export default About;

@@ -80,7 +80,7 @@ class NavBar extends Component {
                   spy={true} 
                   smooth={true} 
                   duration={1000} 
-                  offset={-100}
+                  offset={0}
                 >
                   Home
                 </Menu.Item>
@@ -114,7 +114,7 @@ class NavBar extends Component {
                   spy={true} 
                   smooth={true} 
                   duration={1000}
-                  offset={70} 
+                  offset={0} 
                 >
                   Skill
                 </Menu.Item>
@@ -124,12 +124,14 @@ class NavBar extends Component {
                   name='portfolio' 
                   active={activeItem === 'portfolio'}
                   onClick={this.handleItemClick}
+                  activeClass='active'
+                  onSetActive={this.handleSetActive}
                   as={Link}
                   to='portfolio' 
                   spy={true} 
                   smooth={true} 
                   duration={1000} 
-                  offset={0}
+                  offset={-100}
                 >
                   Porfolio
                 </Menu.Item>
@@ -140,7 +142,6 @@ class NavBar extends Component {
                   active={activeItem === 'practiceProbs'}
                   onClick={this.handleItemClick}
                   as={Link}
-                  activeClass='practiceProbs' 
                   to='practiceProbs' 
                   activeClass='active'
                   onSetActive={this.handleSetActive}
@@ -148,7 +149,6 @@ class NavBar extends Component {
                   smooth={true}
                   duration={1000}
                   offset={-250}
-                  onSetActive={this.handleSetActive}
                 >
                   Practice Problems
                 </Menu.Item>

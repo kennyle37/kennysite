@@ -1,9 +1,8 @@
-import React from 'react'
+import React, { Fragment } from 'react'
 import { Grid, Header, Label, Segment } from 'semantic-ui-react'
-import { Element } from 'react-scroll'
 
 const Skill = () => (
-  <Element name='skill' className='element' style={{ padding:'23em 0em' }}>
+  <Fragment style={{ padding: '50em 10em'}}>
     <Header 
       textAlign='center' 
       as='h3' 
@@ -17,14 +16,14 @@ const Skill = () => (
           <Label as='a' color='teal' ribbon>
             Frontend
           </Label>
-            <Segment vertical fluid>
+            <Segment vertical>
               JavaScript(ES5, ES6), React, Redux, Angular, jQuery, HTML, CSS, SemanticUI
             </Segment>
 
           <Label as='a' color='blue' ribbon>
             Backend
           </Label>
-            <Segment vertical fluid>
+            <Segment vertical>
               MySQL, MongoDB, Mongoose, Knex, Bookshelf, NodeJS, Express
             </Segment>
 
@@ -36,22 +35,21 @@ const Skill = () => (
           <Label as='a' color='blue' ribbon='right'>
             Testing
           </Label>
-            <Segment vertical fluid>
+            <Segment vertical>
               Jest, Travis CI, Mocha, Chai
             </Segment>
 
           <Label as='a' color='teal' ribbon='right'>
             Miscellaneous
           </Label>
-          <Segment vertical fluid>
+          <Segment vertical>
             API, Heroku, Git flow, NPM, Yarn, Agile methodology
           </Segment>
 
         </Segment>
       </Grid.Column>
     </Grid>
-  </Element>
-
+  </Fragment>
 )
 
 export default Skill;
