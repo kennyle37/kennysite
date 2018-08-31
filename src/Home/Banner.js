@@ -12,8 +12,8 @@ class Banner extends React.Component {
     return (
       <Parallax 
         bgImage={img}
-        bgHeight={'300'}
-        strength={300}>
+        bgHeight={'500'}
+        strength={200}>
         <div style={{height: 800}}
       >
         <ProfileDisplay />

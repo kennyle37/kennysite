@@ -59,7 +59,7 @@ class NavBar extends Component {
           <Segment
             inverted
             textAlign='center'
-            style={{ minHeight: 800, padding: '.2em 0em' }}
+            style={{ minHeight: 400, padding: '.1em 0em' }}
             vertical
           >
             <Menu
