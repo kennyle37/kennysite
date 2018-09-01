@@ -11,17 +11,15 @@ const img = 'https://www.wallpaperflare.com/static/918/649/206/nature-mountains-
 class Banner extends React.Component {
   render() {
     return (
-      <Segment>
-        <Parallax 
-          bgImage={img}
-          bgHeight={'500'}
-          strength={200}>
-          <div style={{height: 800}}
-        >
-          <ProfileDisplay />
-          </div>
-        </Parallax>
-      </Segment>
+      <Parallax 
+        bgImage={img}
+        bgHeight={'500'}
+        strength={200}>
+        <div style={{height: 800}}
+      >
+        <ProfileDisplay />
+        </div>
+      </Parallax>
     )
   }
 }
