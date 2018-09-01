@@ -2,7 +2,7 @@ import React from 'react';
 import { Container, Grid, Header, List, Segment} from 'semantic-ui-react'
 
 const Contact = () => (
-  <Segment inverted vertical style={{ padding: '2em 0em' }}>
+  <Segment inverted vertical stackable style={{ padding: '2em 0em' }}>
   <Container>
     <Grid divided inverted stackable>
       <Grid.Row>

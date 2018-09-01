@@ -2,14 +2,14 @@ import React from 'react';
 import { Header, Grid, Image } from 'semantic-ui-react'
 
 const Portfolio = () => (
-  <Grid columns='three' divided textAlign='center' style={{ padding:'24em 15em' }}>
+  <Grid columns='three' stackable textAlign='center' style={{ padding:'24em 5em' }}>
     <Header as='h3' style={{ fontSize: '2em', padding: '1em 1em'}}>
       Portfolio
     </Header>
 
     <Grid.Row>
 
-      <Grid.Column>
+      <Grid.Column mobile={16} tablet={8} computer={4}>
         <Image 
           centered 
           bordered 
@@ -22,7 +22,7 @@ const Portfolio = () => (
         <p style={{ fontSize: '1.33em' }}>An app that helps user negotiate their salary.</p>
       </Grid.Column>
 
-      <Grid.Column>
+      <Grid.Column mobile={16} tablet={8} computer={4}>
         <Image 
           centered 
           bordered 
@@ -34,7 +34,7 @@ const Portfolio = () => (
         <p style={{ fontSize: '1.33em' }}>An app that recommends cooking recipes based on user's grocery list.</p>
       </Grid.Column>
 
-      <Grid.Column>
+      <Grid.Column mobile={16} tablet={8} computer={4}>
         <Image 
           centered 
           bordered 

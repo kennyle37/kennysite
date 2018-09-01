@@ -1,10 +1,13 @@
 import React from 'react'
-import { Form, Card, Grid, Header, Label, Segment } from 'semantic-ui-react'
+import { Grid, Header, Label, Segment } from 'semantic-ui-react'
 
 const img = 'https://wallpapercave.com/wp/no4OgdQ.jpg';
 
 const Skill = () => (
   <Segment style={{ padding: '27em 5em'}}>
+    <Header textAlign='center'>
+      Skills
+    </Header>
     <Grid className='skill-list' stackable columns={4}>
       <Grid.Row stretched>
         <Grid.Column className='front-end'>
