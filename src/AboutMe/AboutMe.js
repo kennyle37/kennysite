@@ -3,7 +3,7 @@ import { Grid, Header, Responsive, Image } from 'semantic-ui-react'
 
 const About = () => (
   <Responsive>
-    <Grid container verticalAlign='middle' style={{ padding: '27em 5em' }}>
+    <Grid container stackable verticalAlign='middle' style={{ padding: '27em 5em' }}>
       <Grid.Row>
         <Grid.Column width={8}  mobile={16} tablet={8} computer={8}>
           <Header as='h3' style={{ fontSize: '2em' }}>
