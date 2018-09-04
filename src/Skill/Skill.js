@@ -5,7 +5,7 @@ import { Parallax } from 'react-parallax'
 const img = 'https://clip2art.com/images/drawn-wallpaper-artistic-art-5.jpg';
 
 const Skill = () => (
-  <Responsive style={{ padding: '10em 5em' }} className='skill-section'>
+  <Responsive style={{ padding: '12em 5em' }} className='skill-section'>
     <Header textAlign='center'>
       Skills
     </Header>
