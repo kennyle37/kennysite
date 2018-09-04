@@ -1,9 +1,12 @@
 import React from 'react';
-import { Grid, Header, Responsive, Image } from 'semantic-ui-react'
+import { Grid, Header, Responsive, Image, Segment } from 'semantic-ui-react'
+
+const img = 'https://clip2art.com/images/drawn-wallpaper-artistic-art-5.jpg';
 
 const About = () => (
+
   <Responsive>
-    <Grid container stackable verticalAlign='middle' style={{ padding: '27em 5em' }}>
+    <Grid container stackable verticalAlign='middle' style={{ padding: '12em 2em' }}>
       <Grid.Row>
         <Grid.Column width={8}  mobile={16} tablet={8} computer={8}>
           <Header as='h3' style={{ fontSize: '2em' }}>
@@ -21,6 +24,7 @@ const About = () => (
       </Grid.Row>
     </Grid>
   </Responsive>
+
 )
 
 export default About;

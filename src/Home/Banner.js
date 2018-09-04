@@ -1,7 +1,6 @@
 import React from 'react'
 import { Parallax } from 'react-parallax'
 import ProfileDisplay from './ProfileDisplay'
-import { Segment } from 'semantic-ui-react'
 
 /*
 This function adds our background banner and add the parralax scrolling effect to it.

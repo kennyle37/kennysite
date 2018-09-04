@@ -1,10 +1,11 @@
 import React from 'react'
-import { Grid, Header, Label, Segment } from 'semantic-ui-react'
+import { Grid, Header, Label, Segment, Responsive } from 'semantic-ui-react'
+import { Parallax } from 'react-parallax'
 
-const img = 'https://wallpapercave.com/wp/no4OgdQ.jpg';
+const img = 'https://clip2art.com/images/drawn-wallpaper-artistic-art-5.jpg';
 
 const Skill = () => (
-  <Segment style={{ padding: '27em 5em'}}>
+  <Responsive style={{ padding: '10em 5em' }} className='skill-section'>
     <Header textAlign='center'>
       Skills
     </Header>
@@ -48,7 +49,7 @@ const Skill = () => (
         </Grid.Column>
       </Grid.Row>
     </Grid>
-  </Segment>
+  </Responsive>
 )
 
 export default Skill;

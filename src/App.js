@@ -5,6 +5,9 @@ import Portfolio from './Portfolio/Portfolio'
 import Skill from './Skill/Skill'
 import Contact from './Contact/Contact'
 import { Element } from 'react-scroll'
+import { Parallax } from 'react-parallax' 
+
+const img = 'https://clip2art.com/images/drawn-wallpaper-artistic-art-5.jpg';
 
 class App extends React.Component {
   render() {
