@@ -6,6 +6,7 @@ To install all dependencies:
 
 ``
 npm install
+npm install -g heroku
 ``
 
 # Deploying Website
