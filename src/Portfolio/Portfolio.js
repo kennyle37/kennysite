@@ -28,7 +28,7 @@ const Portfolio = () => (
         <Image 
           centered 
           bordered 
-          src='https://s3.amazonaws.com/poly-screenshots.angel.co/Project/4b/787514/6a8cf9ee74e865b0db326367dfab1340-original.jpeg' 
+          src='https://photos.google.com/photo/AF1QipO9-IKaYcn8zLd-Rt660AqM-V1vtaRysD_Ue6jw' 
           height='250' 
           width='250' 
         />
@@ -41,7 +41,7 @@ const Portfolio = () => (
         <Image 
           centered 
           bordered 
-          src='https://s3.amazonaws.com/poly-screenshots.angel.co/Project/8a/787523/53bcefb73bda63b82a2dde9cd7e743af-original.jpeg' 
+          src='https://photos.google.com/photo/AF1QipOQcEBFYwhMItRKe5POje1FsI9iFX20Zz8L8rDS' 
           height='250' 
           width='250' 
         />
